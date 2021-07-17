@@ -1,0 +1,6 @@
+r
+loadbin build\TEMPLATE.bin, 0x00
+verifybin build\TEMPLATE.bin, 0x00
+r
+g
+q
