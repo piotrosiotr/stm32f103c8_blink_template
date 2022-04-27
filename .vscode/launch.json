@@ -1,19 +1,21 @@
 {
 	"version": "0.2.0",
 	"configurations": [
-
 		{
-			"name": "Cortex Debug",
+			"name": "OpenOCD2",
 			"cwd": "${workspaceRoot}",
-			"executable": "./build/${workspaceFolderBasename}.elf",
+			"executable": "./build/TEMPLATE.elf",
 			"svdFile": "./JLink/STM32F103xx.svd",
 			"request": "launch",
+			"showDevDebugOutput":"parsed",
 			"type": "cortex-debug",
-			"servertype": "jlink",
+			"servertype": "openocd",
 			"device": "Cortex-M3",
-			"interface": "swd"
-//			"ipAddress": null,
-//            "serialNumber": null,
+			"interface": "swd",
+			"configFiles": [
+				"/usr/local/Cellar/open-ocd/0.11.0/share/openocd/scripts/interface/stlink-v2.cfg",
+				"/usr/local/Cellar/open-ocd/0.11.0/share/openocd/scripts/target/stm32f1x.cfg"
+			]
 		}
 	]
 }

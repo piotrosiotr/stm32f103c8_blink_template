@@ -7,10 +7,7 @@
 			"command": "make -s -j 10 all",
 			"options": {
 				"cwd": "${workspaceRoot}",
-				"shell": {
-					"executable": "cmd.exe",
-					"args": ["/C"]
-				}
+				
             }, 
 			"group": {
 				"kind": "build",
@@ -23,10 +20,6 @@
 			"command": "make -s clean",
 			"options": {
 				"cwd": "${workspaceRoot}",
-				"shell": {
-					"executable": "cmd.exe",
-					"args": ["/C"]
-				}
             }, 
 			"group": {
 				"kind": "build",
